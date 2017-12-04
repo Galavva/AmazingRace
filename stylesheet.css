@@ -1,0 +1,45 @@
+body {
+  background-image:  url("superFinish.png")
+}
+#racers {
+  position: absolute;
+}
+
+#finish {
+  poistion: relative;
+  float:right;
+}
+
+#flash {
+  width: 200px;
+  height: 200px;
+}
+
+#start_race {
+  width: 100px;
+  height: 100px;
+}
+
+#during_race {
+  width: 100px;
+  height: 100px;
+  display: none;
+}
+
+#knocked {
+  width: 200px;
+  height: 200px;
+  disply:none;
+}
+
+#fired {
+  width: 200px;
+  height: 200px;
+  display: none;
+}
+
+#arrow {
+  width: 200px;
+  height: 150px;
+  display: none;
+}
