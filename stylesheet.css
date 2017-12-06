@@ -5,10 +5,7 @@ body {
 #flash {
   width: 200px;
   height: 200px;
-}
-
-#greenArrow {
-  position: relative;
+  position: absolute;
 }
 
 #start_race {
@@ -25,13 +22,14 @@ body {
 #knocked {
   width: 200px;
   height: 200px;
-  disply:none;
+  position: absolute;
 }
 
 #fired {
   width: 200px;
   height: 200px;
   display: none;
+  position: absolute;
 }
 
 #arrow {
