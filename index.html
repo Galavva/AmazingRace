@@ -12,7 +12,7 @@
   <img src="greenLight.png" id="during_race">
   <hr>
    <img src="flash.png" id="flash">
-   <div>
+   <div id="greenArrow">
      <img src="greenArrowKnocked.png" id="knocked">
      <img src="greenArrowFired.png" id="fired">
      <img src="arrow.png" id="arrow">
@@ -38,7 +38,8 @@
     if (posF > 500 || posA > 500 ){
       clearInterval(timer);
       posF > posA ? alert("Flash Wins!") : alert("Green Arrow Wins!");
-    } else {
+    } else
+    {
       var rdmF = Math.floor(Math.random() * 20);
       var rdmA = Math.floor(Math.random() * 20);
       posF += rdmF;
@@ -47,10 +48,8 @@
       arrow.style.left = posA + 'px';
 
     }
-
-      posF > posA ? alert("Flash Wins!"): alert("Green Arrow wins!");
-    }
   }
+}
 
 
    </script>
