@@ -32,17 +32,25 @@
       document.getElementById('knocked').style.display = 'none';
       document.getElementById('fired').style.display = 'inline';
 
-      while(flash.style.left < '500px' || arrow.style.left < '500px')
-      {
-        posF += Math.random();
-        posA += Math.random();
+      var timer = setInterval(frame, 100);
+// Moves the images to the right by a random number between 1 and 20
+  function frame (){
+    if (posF > 500 || posA > 500 ){
+      clearInterval(timer);
+      posF > posA ? alert("Flash Wins!") : alert("Green Arrow Wins!");
+    } else {
+      var rdmF = Math.floor(Math.random() * 20);
+      var rdmA = Math.floor(Math.random() * 20);
+      posF += rdmF;
+      posA += rdmA;
+      flash.style.left = posF + 'px';
+      arrow.style.left = posA + 'px';
 
-        flash.style.left = posF + 'px';
-        arrow.style.left = posA + 'px';
-      }
+    }
 
       posF > posA ? alert("Flash Wins!"): alert("Green Arrow wins!");
     }
+  }
 
 
    </script>
