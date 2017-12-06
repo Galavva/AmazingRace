@@ -19,7 +19,6 @@
    </div>
 
    <script>
-    var element = document.getElementById;
     var flash = document.getElementById('flash');
     var arrow = document.getElementById('arrow');
     var posF = 0;
@@ -27,8 +26,8 @@
 
     function race() {
 
-      element('start_race').display = 'none';
-      element('during_race').display = 'block';
+      document.getElementById('start_race').display = 'none';
+      document.getElementById('during_race').display = 'block';
       document.getElementById('arrow').display = 'block';
       document.getElementById('knocked').display = 'none';
       document.getElementById('fired').display = 'block';
