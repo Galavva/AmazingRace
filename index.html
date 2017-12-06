@@ -8,7 +8,7 @@
 
 </head>
 <body>
-  <img src="redLight.png" id="start_race" onclick="race()" alt="click to begin">
+  <img src="redLight.png" id="start_race" onclick=race() alt="click to begin">
   <img src="greenLight.png" id="during_race">
   <hr>
    <img src="flash.png" id="flash">
@@ -16,3 +16,37 @@
      <img src="greenArrowKnocked.png" id="knocked">
      <img src="greenArrowFired.png" id="fired">
      <img src="arrow.png" id="arrow">
+   </div>
+
+   <script>
+    var flash = document.getElementById('flash');
+    var arrow = document.getElementById('arrow');
+    var posF = 0;
+    var posA = 0;
+
+    function race() {
+
+      document.getElementById('arrow').display = 'block';
+      document.getElementById('knocked').display = 'none';
+      document.getElementById('fired').display = 'block';
+
+      while(flash.style.left < 500px || arrow.style.left < 500px)
+      {
+        posF += Math.random();
+        posA += Math.random();
+
+        flash.style.left = posF + 'px';
+        arrow.style.left = posA + 'px';
+      }
+
+      posF > posA ? alert("Flash Wins!"): alert("Green Arrow wins!");
+
+      flash.style.left = '0px';
+      arrow.style.left = '0px';
+
+    }
+
+
+   </script>
+
+</body>
