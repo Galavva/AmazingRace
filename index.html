@@ -26,11 +26,11 @@
 
     function race() {
 
-      document.getElementById('start_race').display = 'none';
-      document.getElementById('during_race').display = 'block';
-      document.getElementById('arrow').display = 'block';
-      document.getElementById('knocked').display = 'none';
-      document.getElementById('fired').display = 'block';
+      document.getElementById("start_race").style.display="none";
+      document.getElementById("during_race").style.display="inline";
+      document.getElementById('arrow').style.display = 'inline';
+      document.getElementById('knocked').style.display = 'none';
+      document.getElementById('fired').style.display = 'inline';
 
       while(flash.style.left < '500px' || arrow.style.left < '500px')
       {
@@ -42,9 +42,6 @@
       }
 
       posF > posA ? alert("Flash Wins!"): alert("Green Arrow wins!");
-
-      flash.style.left = '0px';
-      arrow.style.left = '0px';
     }
 
 
